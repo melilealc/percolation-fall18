@@ -15,12 +15,18 @@ public class PercolationUF implements IPercolate {
 
 	@Override
 	public void open(int row, int col) {
-		
+		if (! inBounds(row,col)) {
+			throw new IndexOutOfBoundsException(
+					String.format("(%d,%d) not in bounds", row,col));
+		}
 		if(row == 0) {
 			myFinder.union(VTOP, row*myGrid.length + col);
 		}
 		if(row == myGrid.length-1) {
 			myFinder.union(VBOTTOM, row*myGrid.length + col);
+		}
+		if(myGrid[row][col]) {
+			return;
 		}
 		myOpencells++;
 		myGrid[row][col] = true;
