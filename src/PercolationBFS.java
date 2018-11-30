@@ -9,7 +9,8 @@ public class PercolationBFS extends PercolationDFSFast{
 
 	@Override
 	/**
-	 * 
+	 * DFS method uses a queue to make a cell full and check and fill all those cells around it that are open
+	 * This method is more efficient because it uses a queue instead of recursion
 	 */
 	public void dfs(int row, int col) {
 		int size = myGrid.length;
