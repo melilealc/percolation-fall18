@@ -1,7 +1,7 @@
-Your name
-Your netid
+Your Melissa Leal 
+Your mcl52
 
-Copy/Paste results from PercolationStats using PercolationDFS
+
 
 
 Copy/Paste results from PercolationStats using PercolationDFSFast
